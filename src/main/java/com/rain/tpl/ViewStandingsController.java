@@ -36,7 +36,7 @@ public class ViewStandingsController {
 		List<League> leagueObjList = obj.fetchViewStandings(ownerId);
 
 		model.addAttribute("leagueStanding", leagueObjList);
-		model.addAttribute("gameweek", session.getAttribute("gameweek").toString());
+		//model.addAttribute("gameweek", session.getAttribute("gameweek").toString());
 		return "ViewStanding";
 	}
 
