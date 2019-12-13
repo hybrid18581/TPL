@@ -34,7 +34,7 @@ public class ViewStandingsController {
 		LeagueDAO obj = new LeagueDAO();
 
 		List<League> leagueObjList = obj.fetchViewStandings(ownerId);
- //commit
+ //commit 
 		model.addAttribute("leagueStanding", leagueObjList);
 		model.addAttribute("gameweek", session.getAttribute("gameweek").toString());
 		return "ViewStanding";

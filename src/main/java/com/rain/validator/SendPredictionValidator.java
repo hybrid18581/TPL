@@ -46,6 +46,18 @@ public class SendPredictionValidator implements Validator {
 				else
 				{
 				if (pr.getPredictionScoreline().matches("^([0-9]+-)*[0-9]+$")) {
+					
+					String[] score=pr.getPredictionScoreline().split("-");
+					if(Integer.parseInt(score[0])<=Integer.parseInt(score[1]))
+							{
+						
+						 errors.rejectValue("predictionScoreline",
+						 
+						 "error.predictionScoreline", "Predicted team goals should be more than the Opponent");
+						
+							}
+
+   
 
 				} else
 					pr.setPredictionScoreline(null);

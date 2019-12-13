@@ -72,7 +72,11 @@ public class SendPredictionController {
 		Map<String, String> clubScorer= new LinkedHashMap<String, String>();
 		clubScorer.put("Select","");
 		 clubScorer=getclubScorer(predictObj.getPredictionTeam());
-		model.addAttribute(  "clubScorer", clubScorer);
+		 model.addAttribute(  "clubScorer", clubScorer);
+		 Map<String, String> opponentList= new LinkedHashMap<String, String>();
+		 opponentList.put("Select","");
+		 opponentList=getclubOpponent(predictObj.getPredictionTeam());
+		 model.addAttribute(  "opponentList", opponentList);
 		if(errors.hasErrors())
 		{
 			model.addAttribute("hasErrors", "Y");
